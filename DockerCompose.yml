@@ -1,0 +1,17 @@
+version: "3.8"
+    
+services:
+  rest-api-example:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    image: rest-api-example
+    ports: 
+      - 8080:5000
+    networks:
+      - flask-network
+
+networks:
+  flask-network:
+
+# docker-compose -f DockerCompose.yml up 
